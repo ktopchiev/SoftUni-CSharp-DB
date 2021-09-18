@@ -1,0 +1,1 @@
+ALTER TABLE dbo.Minions ADD [TownId] INT NOT NULL;
