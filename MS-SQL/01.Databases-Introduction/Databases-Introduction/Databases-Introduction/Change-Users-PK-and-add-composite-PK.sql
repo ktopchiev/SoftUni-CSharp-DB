@@ -1,0 +1,7 @@
+USE Minions
+
+ALTER TABLE [Users]
+DROP CONSTRAINT PK__Users__3214EC076919CA55
+GO
+ALTER TABLE [Users]
+ADD CONSTRAINT PK__Users__IdUsername PRIMARY KEY ([Id], [Username])
