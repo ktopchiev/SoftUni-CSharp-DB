@@ -52,7 +52,7 @@ INSERT INTO [Employees]([FirstName],[LastName])
 
 CREATE TABLE [Customers] (
 	[Id] INT IDENTITY PRIMARY KEY,
-	[DriverLicenceNumber] INT UNIQUE NOT NULL,
+	[DriverLicenceNumber] INT NOT NULL,
 	[FullName] VARCHAR(50) NOT NULL,
 	[Address] VARCHAR(100) NOT NULL,
 	[City] VARCHAR(20) NOT NULL,
