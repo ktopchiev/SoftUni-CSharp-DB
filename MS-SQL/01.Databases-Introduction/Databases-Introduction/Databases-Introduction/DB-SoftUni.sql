@@ -28,13 +28,10 @@ CREATE TABLE [Employees]
 	[LastName] VARCHAR(20) NOT NULL,
 	[JobTitle] VARCHAR(20) NOT NULL,
 	[DepartmentId] INT FOREIGN KEY REFERENCES [Departments] ([Id]),
-	[HireDate] DATE NOT NULL,
+	[HireDate] DATETIME2 NOT NULL,
 	[Salary] DECIMAL(7,2) NOT NULL,
 	[AddressId] INT FOREIGN KEY REFERENCES [Addresses] ([Id])
 )
-
-ALTER TABLE [Employees]
-ALTER COLUMN [HireDate] DATETIME2
 
 INSERT INTO [Towns] ([Name])
 	VALUES ('Sofia'), ('Plovdiv'), ('Varna'), ('Burgas')
