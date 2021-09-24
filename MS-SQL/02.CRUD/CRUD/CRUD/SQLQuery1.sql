@@ -37,3 +37,4 @@ WHERE [Salary] BETWEEN 20000 AND 30000
 SELECT CONCAT([FirstName], ' ', [MiddleName], ' ', [LastName]) AS [Full Name]
 FROM [Employees]
 WHERE [Salary] = 25000 OR [Salary] = 14000 OR [Salary] = 12500 OR [Salary] = 23600
+
