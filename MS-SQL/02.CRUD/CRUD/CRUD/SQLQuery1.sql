@@ -38,3 +38,12 @@ SELECT CONCAT([FirstName], ' ', [MiddleName], ' ', [LastName]) AS [Full Name]
 FROM [Employees]
 WHERE [Salary] = 25000 OR [Salary] = 14000 OR [Salary] = 12500 OR [Salary] = 23600
 
+SELECT [FirstName], [LastName]
+FROM [Employees]
+WHERE [ManagerID] IS NULL
+
+SELECT [FirstName], [LastName], [Salary]
+FROM [Employees]
+WHERE [Salary] > 50000
+ORDER BY [Salary] DESC
+
