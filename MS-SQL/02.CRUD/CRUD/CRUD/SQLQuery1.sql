@@ -98,3 +98,32 @@ WHERE [DepartmentId] IN (1, 2, 4, 11)
 SELECT [Salary]
 FROM [Employees]
 --1,2,4,11
+
+--All mountain peaks in alphabeticall order
+USE [Geography]
+--
+SELECT [PeakName]
+FROM [Peaks]
+ORDER BY [PeakName]
+--
+SELECT *
+FROM [Countries]
+--
+SELECT TOP 30 [CountryName], [Population]
+FROM [Countries]
+WHERE [ContinentCode] = 'EU'
+ORDER BY [Population] DESC,
+	[CountryName]
+--
+SELECT [CountryName],
+	[CountryCode],
+	CASE WHEN [CurrencyCode] = 'EUR' THEN 'Euro'
+		ELSE 'Not Euro'
+	END AS [Currency]
+FROM [Countries]
+ORDER BY [CountryName] ASC
+--
+USE [Diablo]
+SELECT [Name]
+FROM [Characters]
+ORDER BY [Name] ASC
