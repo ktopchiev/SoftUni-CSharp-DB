@@ -45,3 +45,4 @@ INSERT INTO [Employees] ([FirstName], [MiddleName], [LastName], [JobTitle], [Dep
 	('Maria', 'Petrova', 'Ivanova', 'Intern', 5, '2016/08/28', 525.25),
 	('Georgi', 'Teziev', 'Ivanov', 'CEO', 2, '2007/12/09', 3000.00),
 	('Peter', 'Pan', 'Pan', 'Intern', 3, '2016/08/28', 599.88)
+
