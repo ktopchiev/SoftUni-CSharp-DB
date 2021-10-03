@@ -1,4 +1,5 @@
-SELECT e.EmployeeID 
+SELECT
+	 e.EmployeeID 
 	,e.FirstName
 	,e.LastName
 	,d.Name
