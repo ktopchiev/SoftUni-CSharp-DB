@@ -37,17 +37,29 @@
           <AssociatedConnUserName />
           <FullPath>One-to-One-Relationship.sql</FullPath>
         </FileNode>
+        <FileNode Name="Online-store-db.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Online-store-db.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Peaks-in-Rila.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Peaks-in-Rila.sql</FullPath>
+        </FileNode>
         <FileNode Name="Self-referencing.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Self-referencing.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1.sql">
+        <FileNode Name="University-database.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1.sql</FullPath>
+          <FullPath>University-database.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
