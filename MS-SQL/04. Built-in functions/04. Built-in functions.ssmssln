@@ -5,13 +5,22 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Built-in functions", "Built-in functions\Built-in functions.ssmssqlproj", "{61600AD3-3126-4B44-B03F-CC61F5EE883D}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Queries-for-Geography-Db", "Queries-for-Geography-Db\Queries-for-Geography-Db.ssmssqlproj", "{E47C9BA1-940F-45E2-8B66-FF9CC76DCE09}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Queries-for-diablo-db", "Queries-for-diablo-db\Queries-for-diablo-db.ssmssqlproj", "{50C9BB05-F514-4965-B6B2-98653EE8E4B3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Date-Functions-Query", "Date-Functions-Query\Date-Functions-Query.ssmssqlproj", "{30FE418A-461A-4BB3-9F1F-E7430327AEC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{61600AD3-3126-4B44-B03F-CC61F5EE883D}.Default|Default.ActiveCfg = Default
-		{58A9B9DE-9399-4EA3-9231-22B62EC4C1A3}.Default|Default.ActiveCfg = Default
+		{67E4B4ED-F668-4C22-B92D-18D9A3A1A007}.Default|Default.ActiveCfg = Default
+		{E47C9BA1-940F-45E2-8B66-FF9CC76DCE09}.Default|Default.ActiveCfg = Default
+		{50C9BB05-F514-4965-B6B2-98653EE8E4B3}.Default|Default.ActiveCfg = Default
+		{30FE418A-461A-4BB3-9F1F-E7430327AEC4}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

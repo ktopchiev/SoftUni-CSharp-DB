@@ -19,11 +19,71 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="SQLQuery1.sql">
+        <FileNode Name="Create-view-employees-hired-after.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1.sql</FullPath>
+          <FullPath>Create-view-employees-hired-after.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Find-all-employees-except-engineers.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Find-all-employees-except-engineers.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Find-employees-with-last-name-given-length.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Find-employees-with-last-name-given-length.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Find-first-names-of-all-employees.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Find-first-names-of-all-employees.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Find-towns-by-name-length.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Find-towns-by-name-length.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Find-towns-not-starting-with.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Find-towns-not-starting-with.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Find-towns-starting-with.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Find-towns-starting-with.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Left-first-two.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Left-first-two.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Rank-employees-by-salary.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Rank-employees-by-salary.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Rank-employees-by-salary-2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Rank-employees-by-salary-2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Select-if-string-contained.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Select-if-string-contained.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
