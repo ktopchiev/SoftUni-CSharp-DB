@@ -1,9 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SqlWorkbenchSqlProject">
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Indices and data aggregation">
   <Items>
-    <LogicalFolder Name="Connections" Type="2" />
-    <LogicalFolder Name="Queries" Type="0" />
-    <LogicalFolder Name="Miscellaneous" Type="3" />
-
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="KTOPCHIEV-LAPTO\SQLEXPRESS:KTOPCHIEV-LAPTO\karlo">
+          <Created>2021-10-12T19:16:50.5505581+03:00</Created>
+          <Type>SQL</Type>
+          <Server>KTOPCHIEV-LAPTO\SQLEXPRESS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Age-groups.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Age-groups.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Average Interest.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Average Interest.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Count.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Count.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Departments Total Salaries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Departments Total Salaries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Deposits Filter.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Deposits Filter.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Deposits Sum for Ollivander Family.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Deposits Sum for Ollivander Family.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Deposits-charge.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Deposits-charge.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Deposits-sum.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Deposits-sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Employees Average Salaries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Employees Average Salaries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Employees Count Salaries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Employees Count Salaries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Employees Maximum Salaries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Employees Maximum Salaries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Employees Minimum Salaries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Employees Minimum Salaries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="First Letter.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>First Letter.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Longest Magic Wand Per Deposit Groups.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Longest Magic Wand Per Deposit Groups.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Longest-magic-wand.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Longest-magic-wand.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
   </Items>
 </SqlWorkbenchSqlProject>

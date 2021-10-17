@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Functions, Procedures, TriggersAndTransactions">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Database Basics MS SQL Exam – 8 April 2021">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="KTOPCHIEV-LAPTO\SQLEXPRESS:KTOPCHIEV-LAPTO\karlo">
-          <Created>2021-10-14T18:46:01.8745236+03:00</Created>
+          <Created>2021-10-15T19:25:39.9358646+03:00</Created>
           <Type>SQL</Type>
           <Server>KTOPCHIEV-LAPTO\SQLEXPRESS</Server>
           <UserName />
@@ -19,47 +19,59 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="define function.sql">
+        <FileNode Name="1.Table design.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>define function.sql</FullPath>
+          <FullPath>1.Table design.sql</FullPath>
         </FileNode>
-        <FileNode Name="Salary-level-fn.sql">
+        <FileNode Name="2.Insert.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Salary-level-fn.sql</FullPath>
+          <FullPath>2.Insert.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_Employees by salary level.sql">
+        <FileNode Name="3.Update.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_Employees by salary level.sql</FullPath>
+          <FullPath>3.Update.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_employees salary above number.sql">
+        <FileNode Name="4.Delete.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_employees salary above number.sql</FullPath>
+          <FullPath>4.Delete.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_employees-salary-above-35000.sql">
+        <FileNode Name="5.Unassigned records.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_employees-salary-above-35000.sql</FullPath>
+          <FullPath>5.Unassigned records.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_get-employees_from_town.sql">
+        <FileNode Name="6.Reports and categories.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_get-employees_from_town.sql</FullPath>
+          <FullPath>6.Reports and categories.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_get-towns-starting-with.sql">
+        <FileNode Name="7.Most Reported Category.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_get-towns-starting-with.sql</FullPath>
+          <FullPath>7.Most Reported Category.sql</FullPath>
+        </FileNode>
+        <FileNode Name="8.Birthday reports.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>8.Birthday reports.sql</FullPath>
+        </FileNode>
+        <FileNode Name="9.Users per employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>9.Users per employee.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

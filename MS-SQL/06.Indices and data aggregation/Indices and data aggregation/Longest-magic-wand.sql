@@ -1,2 +1,2 @@
-SELECT COUNT(Id) AS [Count]
+SELECT MAX(MagicWandSize) AS LongestMagicWand
 FROM WizzardDeposits

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Functions, Procedures, TriggersAndTransactions">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MSSQL Server Exam - 16 October 2021">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="KTOPCHIEV-LAPTO\SQLEXPRESS:KTOPCHIEV-LAPTO\karlo">
-          <Created>2021-10-14T18:46:01.8745236+03:00</Created>
+          <Created>2021-10-16T09:00:24.5981568+03:00</Created>
           <Type>SQL</Type>
           <Server>KTOPCHIEV-LAPTO\SQLEXPRESS</Server>
           <UserName />
@@ -19,47 +19,77 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="define function.sql">
+        <FileNode Name="1.Database design.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>define function.sql</FullPath>
+          <FullPath>1.Database design.sql</FullPath>
         </FileNode>
-        <FileNode Name="Salary-level-fn.sql">
+        <FileNode Name="10.Cigars by size.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Salary-level-fn.sql</FullPath>
+          <FullPath>10.Cigars by size.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_Employees by salary level.sql">
+        <FileNode Name="11.Client with cigars.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_Employees by salary level.sql</FullPath>
+          <FullPath>11.Client with cigars.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_employees salary above number.sql">
+        <FileNode Name="2.Insert.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_employees salary above number.sql</FullPath>
+          <FullPath>2.Insert.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_employees-salary-above-35000.sql">
+        <FileNode Name="3.Update.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_employees-salary-above-35000.sql</FullPath>
+          <FullPath>3.Update.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_get-employees_from_town.sql">
+        <FileNode Name="4.Delete.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_get-employees_from_town.sql</FullPath>
+          <FullPath>4.Delete.sql</FullPath>
         </FileNode>
-        <FileNode Name="usp_get-towns-starting-with.sql">
+        <FileNode Name="5.Cigars by price.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>usp_get-towns-starting-with.sql</FullPath>
+          <FullPath>5.Cigars by price.sql</FullPath>
+        </FileNode>
+        <FileNode Name="6.Cigars by taste.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>6.Cigars by taste.sql</FullPath>
+        </FileNode>
+        <FileNode Name="7.Clients without cigars.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>7.Clients without cigars.sql</FullPath>
+        </FileNode>
+        <FileNode Name="8.First 5 cigars.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>8.First 5 cigars.sql</FullPath>
+        </FileNode>
+        <FileNode Name="9. Clients with ZIP codes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>9. Clients with ZIP codes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KTOPCHIEV-LAPTO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KTOPCHIEV-LAPTO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
