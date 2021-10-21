@@ -14,7 +14,8 @@ namespace ConsoleApp1
 
             using (connection)
             {
-                SqlCommand command = new SqlCommand("SELECT TOP 5 * FROM Employees", connection);
+                string cmdText = "SELECT TOP 5 * FROM Employees";
+                SqlCommand command = new SqlCommand(cmdText, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 
                 using (reader)
@@ -22,7 +23,9 @@ namespace ConsoleApp1
                     while (reader.Read())
                     {
                         string firstName = (string)reader["FirstName"];
-                        Console.WriteLine(firstName);
+                        string lastName = (string) reader["LastName"];
+                        decimal salary = (decimal) reader["Salary"];
+                        Console.WriteLine($"{firstName} {lastName} - ${salary}");
                     }
                 }
             }
