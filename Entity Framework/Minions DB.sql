@@ -1,6 +1,7 @@
 --01. 
 CREATE DATABASE MinionsDB
---02.  
+--02.
+USE MinionsDB
 CREATE TABLE Countries (Id INT PRIMARY KEY IDENTITY,Name VARCHAR(50))
 
 CREATE TABLE Towns(Id INT PRIMARY KEY IDENTITY,Name VARCHAR(50), CountryCode INT FOREIGN KEY REFERENCES Countries(Id))
@@ -23,15 +24,15 @@ INSERT INTO EvilnessFactors (Name) VALUES ('Super good'),('Good'),('Bad'), ('Evi
 
 INSERT INTO Villains (Name, EvilnessFactorId) VALUES ('Gru',2),('Victor',1),('Jilly',3),('Miro',4),('Rosen',5),('Dimityr',1),('Dobromir',2)
 
-INSERT INTO MinionsVillains (MinionId, VillainId) VALUES (4,2),(1,1),(5,7),(3,5),(2,6),(11,5),(8,4),(9,7),(7,1),(1,3),(7,3),(5,3),(4,3),(1,2),(2,1),(2,7)
+INSERT INTO MinionsVillains (MinionId, VillainId) VALUES  (4,2),(1,1),(5,7),(3,5),(2,6),(11,5),(8,4),(9,7),(7,1),(1,3),(7,3),(5,3),(4,3),(1,2),(2,1),(2,7), (3,1), (4,1), (5,1),(2,2), (3,2)
 
 --Problem 02
   SELECT v.Name, COUNT(mv.VillainId) AS MinionsCount  
     FROM Villains AS v 
     JOIN MinionsVillains AS mv ON v.Id = mv.VillainId 
 GROUP BY v.Id, v.Name 
-  HAVING COUNT(mv.VillainId) > 3 
-ORDER BY COUNT(mv.VillainId)
+  HAVING COUNT(mv.VillainId) > 3
+ORDER BY COUNT(mv.VillainId) DESC
 
 --Problem 03
 SELECT Name FROM Villains WHERE Id = @Id
