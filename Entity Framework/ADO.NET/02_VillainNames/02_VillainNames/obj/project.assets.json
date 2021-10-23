@@ -1576,9 +1576,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SoftUni\\SoftUni-C-Sharp-DB\\Entity Framework\\ADO.NET\\02_VillainNames\\02_VillainNames\\02_VillainNames.csproj",
-      "projectName": "02_VillainNames",
-      "projectPath": "D:\\SoftUni\\SoftUni-C-Sharp-DB\\Entity Framework\\ADO.NET\\02_VillainNames\\02_VillainNames\\02_VillainNames.csproj",
+      "projectUniqueName": "D:\\SoftUni\\SoftUni-C-Sharp-DB\\Entity Framework\\ADO.NET\\02_VillainNames\\02_VillainNames\\ADO.NET_Exercises.csproj",
+      "projectName": "ADO.NET_Exercises",
+      "projectPath": "D:\\SoftUni\\SoftUni-C-Sharp-DB\\Entity Framework\\ADO.NET\\02_VillainNames\\02_VillainNames\\ADO.NET_Exercises.csproj",
       "packagesPath": "C:\\Users\\karlo\\.nuget\\packages\\",
       "outputPath": "D:\\SoftUni\\SoftUni-C-Sharp-DB\\Entity Framework\\ADO.NET\\02_VillainNames\\02_VillainNames\\obj\\",
       "projectStyle": "PackageReference",
