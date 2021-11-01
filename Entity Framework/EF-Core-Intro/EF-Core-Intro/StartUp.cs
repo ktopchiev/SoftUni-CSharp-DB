@@ -2,6 +2,7 @@
 using SoftUni.Data;
 using SoftUni.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -13,6 +14,7 @@ namespace SoftUni
         {
             SoftUniContext context = new SoftUniContext();
             //Console.WriteLine(GetEmployeesFullInformation(context));
+            Console.WriteLine(GetEmployeesWithSalaryOver50000(context));
         }
 
         public static string GetEmployeesFullInformation(SoftUniContext context)
@@ -51,7 +53,24 @@ namespace SoftUni
 
         public static string GetEmployeesWithSalaryOver50000(SoftUniContext context)
         {
+            var employees = context.Employees
+                .Where(e => e.Salary > 50000)
+                .Select(e => new 
+                {
+                    e.FirstName,
+                    e.Salary
+                })
+                .ToList()
+                .OrderBy(e => e.FirstName);
 
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var e in employees)
+            {
+                sb.AppendLine($"{e.FirstName} - {e.Salary:f2}");
+            }
+
+            return sb.ToString().Trim();
         }
     }
 }
