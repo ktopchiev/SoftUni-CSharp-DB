@@ -60,8 +60,8 @@ namespace SoftUni
                     e.FirstName,
                     e.Salary
                 })
-                .ToList()
-                .OrderBy(e => e.FirstName);
+                .OrderBy(e => e.FirstName)
+                .ToList();
 
             StringBuilder sb = new StringBuilder();
 
