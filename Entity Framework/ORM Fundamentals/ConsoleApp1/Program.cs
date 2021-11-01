@@ -8,6 +8,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            //Database first model - dotnet ef dbcontext scaffold "Server=KTOPCHIEV-LAPTO\SQLEXPRESS; Database=SoftUni; Integrated Security=true;" Microsoft.EntityFrameworkCore.SqlServer -o Models
 
             var db = new SoftUniContext();
             var employees = db.Employees.Where(e => e.FirstName == "Guy")
