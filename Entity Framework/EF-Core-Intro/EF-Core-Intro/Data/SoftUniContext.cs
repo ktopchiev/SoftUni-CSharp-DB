@@ -25,7 +25,7 @@ namespace SoftUni.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=KTOPCHIEV-LAPTO\\SQLEXPRESS;Database=SoftUni;Integrated Security=True;");
+                optionsBuilder.UseSqlServer("Server=KT;Database=SoftUni;Integrated Security=True;");
             }
         }
 
