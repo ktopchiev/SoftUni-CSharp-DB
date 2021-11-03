@@ -21,7 +21,7 @@ namespace SoftUni
             Console.WriteLine(GetEmployeesInPeriod(context));
         }
 
-        //Problem 02
+        //Problem 03
         public static string GetEmployeesFullInformation(SoftUniContext context)
         {
 
@@ -56,7 +56,7 @@ namespace SoftUni
 
         }
 
-        //Problem 03
+        //Problem 04
         public static string GetEmployeesWithSalaryOver50000(SoftUniContext context)
         {
             var employees = context.Employees
@@ -79,7 +79,7 @@ namespace SoftUni
             return sb.ToString().Trim();
         }
 
-        //Problem 04
+        //Problem 05
         public static string GetEmployeesFromResearchAndDevelopment(SoftUniContext context)
         {
             var employees = context.Employees
@@ -105,7 +105,7 @@ namespace SoftUni
             return sb.ToString().Trim();
         }
 
-        //Problem 05
+        //Problem 06
         public static string AddNewAddressToEmployee(SoftUniContext context)
         {
             Employee employee = context.Employees.FirstOrDefault(e => e.LastName == "Nakov");
@@ -136,7 +136,7 @@ namespace SoftUni
             return sb.ToString().Trim();
         }
 
-        //Problem 06
+        //Problem 07
         public static string GetEmployeesInPeriod(SoftUniContext context)
         {
             var employees = context.Employees
