@@ -18,7 +18,8 @@ namespace SoftUni
             //Console.WriteLine(GetEmployeesWithSalaryOver50000(context));
             //Console.WriteLine(GetEmployeesFromResearchAndDevelopment(context));
             //Console.WriteLine(AddNewAddressToEmployee(context));
-            Console.WriteLine(GetEmployeesInPeriod(context));
+            //Console.WriteLine(GetEmployeesInPeriod(context));
+            Console.WriteLine(GetAddressesByTown(context));
         }
 
         //Problem 03
@@ -177,6 +178,12 @@ namespace SoftUni
             }
 
             return sb.ToString().TrimEnd();
+        }
+
+        //Problem 08
+        public static string GetAddressesByTown(SoftUniContext context)
+        {
+            return null;
         }
     }
 }
