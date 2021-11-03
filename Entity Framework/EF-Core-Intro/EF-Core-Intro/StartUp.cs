@@ -142,7 +142,7 @@ namespace SoftUni
             var employees = context.Employees
                 .Include(e => e.EmployeesProjects)
                 .ThenInclude(e => e.Project)
-                .Where(e => e.EmployeesProjects.Any(ep => ep.Project.StartDate.Year > 2001 && ep.Project.StartDate.Year <= 2003))
+                .Where(e => e.EmployeesProjects.Any(ep => ep.Project.StartDate.Year >= 2001 && ep.Project.StartDate.Year <= 2003))
                 .Select(e => new
                 {
                     Id = e.EmployeeId,
@@ -176,7 +176,7 @@ namespace SoftUni
                 }
             }
 
-            return sb.ToString().Trim();
+            return sb.ToString().TrimEnd();
         }
     }
 }
