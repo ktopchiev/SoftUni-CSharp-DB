@@ -20,7 +20,8 @@ namespace SoftUni
             //Console.WriteLine(AddNewAddressToEmployee(context));
             //Console.WriteLine(GetEmployeesInPeriod(context));
             //Console.WriteLine(GetAddressesByTown(context));
-            Console.WriteLine(GetEmployee147(context));
+            //Console.WriteLine(GetEmployee147(context));
+            Console.WriteLine(GetDepartmentsWithMoreThan5Employees(context));
         }
 
         //Problem 03
@@ -235,6 +236,70 @@ namespace SoftUni
             }
 
             return sb.ToString().TrimEnd();
+        }
+
+        //Problem 10
+        public static string GetDepartmentsWithMoreThan5Employees(SoftUniContext context)
+        {
+            //var employees = context.Departments
+            //    .Include(e => e.Employees)
+            //    .Select(e => new
+            //    {
+            //        DepartmentName = e.Name,
+            //        ManagerName = e.Manager.FirstName,
+            //        ManagerLastName = e.Manager.LastName,
+            //        Employees = e.Employees.Select(e => new
+            //        {
+            //            FirstName = e.FirstName,
+            //            LastName = e.LastName,
+            //            JobTitle = e.JobTitle
+            //        })
+            //        .OrderBy(e => e.FirstName)
+            //        .ThenBy(e => e.LastName)
+            //        .ToList(),
+            //        EmployeesCount = e.Employees.Select(e => e.EmployeeId).Count()
+            //    })
+            //    .Where(d => d.EmployeesCount > 5)
+            //    .OrderBy(d => d.DepartmentName)
+            //    .ToList()
+            //    .OrderBy(d => d.EmployeesCount);
+
+            //StringBuilder sb = new StringBuilder();
+
+            //foreach (var emp in employees)
+            //{
+            //    sb.AppendLine($"{emp.DepartmentName} - {emp.ManagerName} {emp.ManagerLastName}");
+            //    foreach (var employee in emp.Employees)
+            //    {
+            //        sb.AppendLine($"{employee.FirstName} {employee.LastName} - {employee.JobTitle}");
+            //    }
+            //}
+
+            //return sb.ToString().TrimEnd();
+
+            StringBuilder content = new StringBuilder();
+
+            var departments = context
+                .Departments.Where(department => department.Employees.Count > 5)
+                .Include(x => x.Manager)
+                .Include(x => x.Employees)
+                .OrderBy(department => department.Employees.Count)
+                .ThenBy(x => x.Name)
+                .ToArray();
+
+            foreach (var department in departments)
+            {
+                content.AppendLine($"{department.Name} - {department.Manager.FirstName} {department.Manager.LastName}");
+
+                var employees = department.Employees.OrderBy(x => x.FirstName).ThenBy(x => x.LastName);
+
+                foreach (var employee in employees)
+                {
+                    content.AppendLine($"{employee.FirstName} {employee.LastName} - {employee.JobTitle}");
+                }
+            }
+
+            return content.ToString().TrimEnd();
         }
     }
 }
