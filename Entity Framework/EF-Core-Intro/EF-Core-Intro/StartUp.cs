@@ -183,7 +183,28 @@ namespace SoftUni
         //Problem 08
         public static string GetAddressesByTown(SoftUniContext context)
         {
-            return null;
+            var addresses = context.Addresses
+                .Include(e => e.Employees)
+                .Select(e => new
+                {
+                    TownName = e.Town.Name,
+                    Address = e.AddressText,
+                    EmployeesNum = e.Employees.Select(e => e.EmployeeId).Count()
+                })
+                .OrderByDescending(e => e.EmployeesNum)
+                .ThenBy(e => e.TownName)
+                .ThenBy(e => e.Address)
+                .Take(10);
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var employee in addresses)
+            {
+                var count = employee.EmployeesNum;
+                sb.AppendLine($"{employee.Address}, {employee.TownName} - {count} employees");
+            }
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
