@@ -19,7 +19,8 @@ namespace SoftUni
             //Console.WriteLine(GetEmployeesFromResearchAndDevelopment(context));
             //Console.WriteLine(AddNewAddressToEmployee(context));
             //Console.WriteLine(GetEmployeesInPeriod(context));
-            Console.WriteLine(GetAddressesByTown(context));
+            //Console.WriteLine(GetAddressesByTown(context));
+            Console.WriteLine(GetEmployee147(context));
         }
 
         //Problem 03
@@ -202,6 +203,35 @@ namespace SoftUni
             {
                 var count = employee.EmployeesNum;
                 sb.AppendLine($"{employee.Address}, {employee.TownName} - {count} employees");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //Problem 09
+        public static string GetEmployee147(SoftUniContext context)
+        {
+            var employee = context.Employees
+                .Include(e => e.EmployeesProjects)
+                .Where(e => e.EmployeeId == 147)
+                .Select(e => new
+                {
+                    FirstName = e.FirstName,
+                    LastName = e.LastName,
+                    JobTitle = e.JobTitle,
+                    Projects = e.EmployeesProjects
+                        .Select(e => e.Project)
+                        .OrderBy(p => p.Name)
+                        .ToList()
+                })
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{employee[0].FirstName} {employee[0].LastName} - {employee[0].JobTitle}");
+
+            foreach (var project in employee[0].Projects)
+            {
+                sb.AppendLine($"{project.Name}");
             }
 
             return sb.ToString().TrimEnd();
