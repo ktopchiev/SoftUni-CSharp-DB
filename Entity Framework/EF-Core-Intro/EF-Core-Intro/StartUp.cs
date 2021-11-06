@@ -21,7 +21,8 @@ namespace SoftUni
             //Console.WriteLine(GetEmployeesInPeriod(context));
             //Console.WriteLine(GetAddressesByTown(context));
             //Console.WriteLine(GetEmployee147(context));
-            Console.WriteLine(GetDepartmentsWithMoreThan5Employees(context));
+            //Console.WriteLine(GetDepartmentsWithMoreThan5Employees(context));
+            Console.WriteLine(GetLatestProjects(context));
         }
 
         //Problem 03
@@ -300,6 +301,32 @@ namespace SoftUni
             }
 
             return content.ToString().TrimEnd();
+        }
+
+        //Problem 11
+        public static string GetLatestProjects(SoftUniContext context)
+        {
+            var projects = context.Projects
+                .Select(p => new
+                {
+                    Name = p.Name,
+                    Description = p.Description,
+                    StartDate = p.StartDate,
+                })
+                .OrderByDescending(p => p.StartDate)
+                .Take(10)
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var project in projects.OrderBy(p => p.Name))
+            {
+                sb.AppendLine($"{project.Name}");
+                sb.AppendLine($"{project.Description}");
+                sb.AppendLine($"{project.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture)}");
+            }
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
