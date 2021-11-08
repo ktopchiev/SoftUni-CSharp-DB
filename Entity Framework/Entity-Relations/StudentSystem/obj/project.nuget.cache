@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ITF4HaPjEJWTLIyylS6hnLXE9aFHqK/SIP034P4rQgIxy1fHmaKkyf3cyeLf4oI2elEmA8Yj5A8aabxW7tSEBg==",
+  "success": true,
+  "projectFilePath": "D:\\SoftUni\\SoftUni-C-Sharp-DB\\Entity Framework\\Entity-Relations\\StudentSystem\\P01_StudentSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\karlo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}
