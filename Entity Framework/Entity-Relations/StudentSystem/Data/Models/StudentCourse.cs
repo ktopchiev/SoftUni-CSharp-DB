@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-
-namespace StudentSystem.Data.Models
+﻿namespace P01_StudentSystem.Data.Models
 {
     public class StudentCourse
     {
-        [Key]
-        [ForeignKey("Student")]
         public int StudentId { get; set; }
 
-        [Key]
-        [ForeignKey("Course")]
+        public Student Student { get; set; }
+
         public int CourseId { get; set; }
+
+        public Course Course { get; set; }
     }
 }

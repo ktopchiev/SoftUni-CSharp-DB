@@ -1,25 +1,28 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
-namespace StudentSystem.Data.Models
+namespace P01_StudentSystem.Data.Models
 {
     public class Student
     {
-        [Key]
+        public Student()
+        {
+            HomeworkSubmissions = new List<Homework>();
+            CourseEnrollments = new List<StudentCourse>();
+        }
+
         public int StudentId { get; set; }
 
-        [Required]
-        [MaxLength(100)]
         public string Name { get; set; }
 
-        [MaxLength(10)]
-        [Column(TypeName = "varchar(100)")]
         public string PhoneNumber { get; set; }
 
-        [Required]
         public DateTime RegisteredOn { get; set; }
 
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
+
+        public ICollection<StudentCourse> CourseEnrollments { get; set; }
+
+        public ICollection<Homework> HomeworkSubmissions { get; set; }
     }
 }
