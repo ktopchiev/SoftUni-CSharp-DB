@@ -5,8 +5,6 @@
     using System.Linq;
     using System.Text;
     using Data;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.EntityFrameworkCore.Internal;
 
     public class StartUp
     {
