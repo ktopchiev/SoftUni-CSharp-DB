@@ -14,9 +14,9 @@
 
         public DateTime CreatedOn { get; set; }
 
-        public Genre? Genre { get; set; }
+        public Genre Genre{ get; set; }
 
-        public int AlbumId { get; set; }
+        public int? AlbumId { get; set; }
 
         public Album Album { get; set; }
 

@@ -1,6 +1,5 @@
 ﻿namespace MusicHub.Data.Models
 {
-    using System;
     using System.Collections.Generic;
 
     public class Performer
@@ -15,6 +14,6 @@
 
         public decimal NetWorth { get; set; }
 
-        public ICollection<SongPerformer> SongPerformers { get; set; } = new HashSet<SongPerformer>();
+        public ICollection<SongPerformer> PerformerSongs { get; set; } = new HashSet<SongPerformer>();
     }
 }

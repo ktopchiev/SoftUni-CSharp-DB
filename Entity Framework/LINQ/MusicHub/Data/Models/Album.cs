@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
 
     public class Album
     {
@@ -11,9 +13,9 @@
 
         public DateTime ReleaseDate { get; set; }
 
-        public decimal Price { get; private set; }
+        public decimal Price => Songs.Sum(s => s.Price);
 
-        public int ProducerId { get; set; }
+        public int? ProducerId { get; set; }
 
         public Producer Producer { get; set; }
 
