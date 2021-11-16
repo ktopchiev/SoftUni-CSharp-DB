@@ -16,9 +16,12 @@
             //var command = Console.ReadLine();
             //Console.WriteLine(GetBooksByAgeRestriction(db, command));
             //Console.WriteLine(GetGoldenBooks(dbContext));
-            Console.WriteLine(GetBooksByPrice(dbContext));
+            //Console.WriteLine(GetBooksByPrice(dbContext));
+            var year = int.Parse(Console.ReadLine());
+            Console.WriteLine(GetBooksNotReleasedIn(dbContext, year));
         }
 
+        //Problem 01
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
         {
             var books = context.Books.Where(b => Enum.Parse<AgeRestriction>(command, true) == b.AgeRestriction)
@@ -36,6 +39,7 @@
             return sb.ToString().TrimEnd();
         }
 
+        //Problem 02
         public static string GetGoldenBooks(BookShopContext context)
         {
             EditionType editionType = Enum.Parse<EditionType>("gold", true);
@@ -57,6 +61,7 @@
             return sb.ToString().TrimEnd();
         }
 
+        //Problem 03
         public static string GetBooksByPrice(BookShopContext context)
         {
             var books = context.Books
@@ -72,6 +77,25 @@
             }
 
             return sb.ToString().TrimEnd();
+        }
+
+        //Problem 04
+        public static string GetBooksNotReleasedIn(BookShopContext context, int year)
+        {
+            var books = context.Books
+                .Where(b => b.ReleaseDate.Value.Year != year)
+                .Select(b => new { b.Title, b.BookId })
+                .OrderBy(b => b.BookId)
+                .ToList();
+
+            var sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine(book.Title);
+            }
+
+            return sb.ToString().Trim();
         }
     }
 }
