@@ -15,7 +15,8 @@
             //DbInitializer.ResetDatabase(db);
             //var command = Console.ReadLine();
             //Console.WriteLine(GetBooksByAgeRestriction(db, command));
-            Console.WriteLine(GetGoldenBooks(dbContext));
+            //Console.WriteLine(GetGoldenBooks(dbContext));
+            Console.WriteLine(GetBooksByPrice(dbContext));
         }
 
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
@@ -51,6 +52,23 @@
             foreach (var book in books)
             {
                 sb.AppendLine(book.Title);
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string GetBooksByPrice(BookShopContext context)
+        {
+            var books = context.Books
+                .Where(b => b.Price > 40)
+                .Select(b => new { b.Title, b.Price })
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var book in books.OrderByDescending(b => b.Price))
+            {
+                sb.AppendLine($"{book.Title} - ${book.Price:f2}");
             }
 
             return sb.ToString().TrimEnd();
