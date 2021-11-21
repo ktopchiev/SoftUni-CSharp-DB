@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ce3ad243-2cf1-487c-b449-4d292cb0a793": {
+      "ProjectGuid": "ce3ad243-2cf1-487c-b449-4d292cb0a793",
+      "DisplayName": "FastFood.Core",
+      "ColorIndex": 0
+    },
+    "053243e1-9204-4b39-aca3-7e4fa7c1c2fa": {
+      "ProjectGuid": "053243e1-9204-4b39-aca3-7e4fa7c1c2fa",
+      "DisplayName": "FastFood.Data",
+      "ColorIndex": 1
+    },
+    "c6bcd549-980d-460d-af9c-3775ff70f18a": {
+      "ProjectGuid": "c6bcd549-980d-460d-af9c-3775ff70f18a",
+      "DisplayName": "FastFood.Models",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -16,9 +16,10 @@
             //var command = Console.ReadLine();
             //Console.WriteLine(GetBooksByAgeRestriction(db, command));
             //Console.WriteLine(GetGoldenBooks(dbContext));
-            //Console.WriteLine(GetBooksByPrice(dbContext));
-            var year = int.Parse(Console.ReadLine());
-            Console.WriteLine(GetBooksNotReleasedIn(dbContext, year));
+            ////Console.WriteLine(GetBooksByPrice(dbContext));
+            var input = Console.ReadLine();
+            //Console.WriteLine(GetBooksNotReleasedIn(dbContext, year));
+            Console.WriteLine(GetBooksByCategory(dbContext, input));
         }
 
         //Problem 01
@@ -96,6 +97,24 @@
             }
 
             return sb.ToString().Trim();
+        }
+
+        //Problem 05
+        public static string GetBooksByCategory(BookShopContext context, string input)
+        {
+            var inputArr = input.Split(" ");
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var i in inputArr)
+            {
+                context.Books
+                    .Select(b => new
+                    {
+                       books = b.BookCategories.Select(c => new {b.Title, c.CategoryId})
+                        ,
+                    })
+                    .Where(b => b.)
+            }
         }
     }
 }
