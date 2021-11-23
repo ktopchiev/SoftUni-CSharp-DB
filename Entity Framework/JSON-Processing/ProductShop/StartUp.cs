@@ -16,14 +16,16 @@ namespace ProductShop
             ProductShopContext context = new ProductShopContext();
             var workingDirectory = Environment.CurrentDirectory;
             var path = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            var file = path + "\\Datasets\\users.json";
+            //var file = path + "\\Datasets\\users.json";
+            var datasetFile = path + "\\Datasets\\products.json";
 
-            var inputJson = File.ReadAllText(file);
+            var inputJson = File.ReadAllText(datasetFile);
 
-
-            Console.WriteLine(ImportUsers(context, inputJson));
+            //Console.WriteLine(ImportUsers(context, inputJson));
+            Console.WriteLine(ImportProducts(context, inputJson));
         }
 
+        //Problem 02
         public static string ImportUsers(ProductShopContext context, string inputJson)
         {
 
@@ -37,6 +39,21 @@ namespace ProductShop
 
             context.SaveChanges();
             return $"Successfully imported { context.Users.Count()}";
+        }
+
+        //Problem 03
+        public static string ImportProducts(ProductShopContext context, string inputJson)
+        {
+            List<Product> productObjects = JsonConvert.DeserializeObject<List<Product>>(inputJson);
+
+            foreach (var product in productObjects)
+            {
+                context.Products.Add(product);
+            }
+
+            context.SaveChanges();
+
+            return $"Successfuly imported {context.Products.Count()}";
         }
     }
 }
