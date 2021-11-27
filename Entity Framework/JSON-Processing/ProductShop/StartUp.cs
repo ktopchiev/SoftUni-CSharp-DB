@@ -30,9 +30,9 @@ namespace ProductShop
             //Console.WriteLine(ImportProducts(context, inputJson));
             //Console.WriteLine(ImportCategories(context, inputJson));
             //Console.WriteLine(ImportCategoryProducts(context, inputJson));
-            //Console.WriteLine(GetProductsInRange(context));
+            Console.WriteLine(GetProductsInRange(context));
             //Console.WriteLine(GetSoldProducts(context));
-            Console.WriteLine(GetCategoriesByProductsCount(context));
+            //Console.WriteLine(GetCategoriesByProductsCount(context));
         }
 
         ////Problem 01
@@ -109,17 +109,28 @@ namespace ProductShop
         {
             var products = context.Products
                 .Include(p => p.Seller)
-                .Where(p => p.Price > 500 && p.Price <= 1000)
-                .Select(p => new
+                .Where(p => p.Price >= 500 && p.Price <= 1000)
+                .Select(p => new ProductInRangeDto
                 {
-                    p.Name,
-                    p.Price,
-                    p.Seller
+                    Name = p.Name,
+                    Price = p.Price,
+                    Seller = $"{p.Seller.FirstName} {p.Seller.LastName}"
                 })
                 .OrderBy(p => p.Price)
                 .ToList();
 
-            var productsJson = JsonConvert.SerializeObject(products, Formatting.Indented);
+            DefaultContractResolver contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var jsonSettings = new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented,
+            };
+
+            var productsJson = JsonConvert.SerializeObject(products, jsonSettings);
 
             return productsJson;
         }
