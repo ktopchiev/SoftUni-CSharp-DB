@@ -13,6 +13,27 @@ namespace CarDealer
     {
         public static void Main(string[] args)
         {
+            var workingDirectory = Environment.CurrentDirectory;
+            var currentDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            var jsonPath = currentDirectory + "\\Datasets\\suppliers.json";
+
+            string json = File.ReadAllText(jsonPath);
+
+            var context = new CarDealerContext();
+
+
+            Console.WriteLine(ImportSuppliers(context, json));
+        }
+
+        public static string ImportSuppliers(CarDealerContext context, string inputJson)
+        {
+            var suppliersList = JsonConvert.DeserializeObject<List<Supplier>>(inputJson);
+
+            context.AddRange(suppliersList);
+            
+            context.SaveChanges();
+
+            return $"Successfully imported {context.Suppliers.Count()}.";
         }
     }
 }

@@ -30,9 +30,10 @@ namespace ProductShop
             //Console.WriteLine(ImportProducts(context, inputJson));
             //Console.WriteLine(ImportCategories(context, inputJson));
             //Console.WriteLine(ImportCategoryProducts(context, inputJson));
-            Console.WriteLine(GetProductsInRange(context));
+            //Console.WriteLine(GetProductsInRange(context));
             //Console.WriteLine(GetSoldProducts(context));
             //Console.WriteLine(GetCategoriesByProductsCount(context));
+            //Console.WriteLine(GetUsersWithProducts(context));
         }
 
         ////Problem 01
@@ -86,7 +87,7 @@ namespace ProductShop
             return $"Successfully imported {dbContext.Count()}";
         }
 
-        ////Problem 04
+        //Problem 04
         public static string ImportCategoryProducts(ProductShopContext context, string inputJson)
         {
             var table = context.CategoryProducts;
@@ -205,6 +206,55 @@ namespace ProductShop
             var categoriesJson = JsonConvert.SerializeObject(categories, jsonSettings);
 
             return categoriesJson;
+        }
+
+        //Problem 08
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var users = context.Users
+                .Include(u => u.ProductsSold)
+                .Where(u => u.ProductsSold.Count > 0)
+                .Select(u => new UserAndProducts
+                {
+                    LastName = u.LastName,
+                    Age = u.Age,
+                    SoldProducts = u.ProductsSold.Select(p => new SoldProducts
+                    {
+                        Count = u.ProductsSold
+                            .Where(ps => ps.Buyer != null)
+                            .Count(),
+                        Products = u.ProductsSold
+                            .Where(ps => ps.Buyer != null)
+                            .Select(ps => new ProductDto
+                            {
+                                Name = ps.Name,
+                                Price = ps.Price
+                            }).ToList()
+                    }).ToList()
+                })
+                .OrderByDescending(u => u.SoldProducts.Count)
+                .ToList();
+
+            var result = new UsersAndProductsDto
+            {
+                UsersCount = users.Count,
+                Users = users
+            };
+
+            DefaultContractResolver contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var jsonSettings = new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            };
+
+            var usersJson = JsonConvert.SerializeObject(result, jsonSettings);
+
+            return usersJson;
         }
     }
 }

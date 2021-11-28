@@ -1,0 +1,13 @@
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.deps.json
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.runtimeconfig.json
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.runtimeconfig.dev.json
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.dll
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.pdb
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.csproj.AssemblyReference.cache
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.GeneratedMSBuildEditorConfig.editorconfig
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfoInputs.cache
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfo.cs
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.csproj.CoreCompileInputs.cache
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.dll
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.pdb
+D:\SoftUni\SoftUni-C-Sharp-DB\Entity Framework\JSON-Processing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.genruntimeconfig.cache
