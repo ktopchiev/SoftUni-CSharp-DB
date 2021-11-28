@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using AutoMapper;
 using CarDealer.Data;
+using CarDealer.DTO;
 using CarDealer.Models;
 using Newtonsoft.Json;
 
@@ -18,6 +19,7 @@ namespace CarDealer
             //var jsonFile = "suppliers.json";
             //var jsonFile = "parts.json";
             var jsonFile = "cars.json";
+            //var jsonFile = "customers.json";
             var jsonPath = $"{currentDirectory}\\Datasets\\{jsonFile}";
 
             string json = File.ReadAllText(jsonPath);
@@ -27,6 +29,7 @@ namespace CarDealer
             //Console.WriteLine(ImportSuppliers(context, json));
             //Console.WriteLine(ImportParts(context, json));
             Console.WriteLine(ImportCars(context, json));
+            //Console.WriteLine(ImportCustomers(context, json));
         }
 
         //Problem 08 - Import Suppliers
@@ -60,13 +63,42 @@ namespace CarDealer
         //Problem 10 - Import Cars
         public static string ImportCars(CarDealerContext context, string inputJson)
         {
-            IEnumerable<Car> carsList = JsonConvert.DeserializeObject<IEnumerable<Car>>(inputJson);
+            var carsList = JsonConvert.DeserializeObject<List<CarDto>>(inputJson);
 
-            context.Cars.AddRange(carsList);
+            List<Car> cars = new List<Car>();
+
+            foreach (var car in carsList)
+            {
+                Car newCar = new Car()
+                {
+                    Make = car.Make,
+                    Model = car.Model,
+                    TravelledDistance = car.TraveledDistance
+                };
+
+                foreach (var partId in car.PartsId.Distinct())
+                {
+                    newCar.PartCars.Add(new PartCar
+                    {
+                        Car = newCar,
+                        PartId = partId
+                    });
+                }
+
+                cars.Add(newCar);
+            }
+
+            context.Cars.AddRange(cars);
 
             context.SaveChanges();
 
-            return $"Successfully imported {context.Cars.Count()}";
+            return $"Successfully imported {context.Cars.Count()}.";
         }
+
+        ////Problem 11 - Import Customers
+        //public static string ImportCustomers(CarDealerContext context, string inputJson)
+        //{
+        //    return $"Successfully added "
+        //}
     }
 }
