@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarDealer.DTO.Import
 {
-    public class Supplier
+    public class SupplierDTO
     {
         public string Name { get; set; }
 
