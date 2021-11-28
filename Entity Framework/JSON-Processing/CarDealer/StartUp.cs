@@ -18,8 +18,8 @@ namespace CarDealer
             var currentDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
             //var jsonFile = "suppliers.json";
             //var jsonFile = "parts.json";
-            var jsonFile = "cars.json";
-            //var jsonFile = "customers.json";
+            //var jsonFile = "cars.json";
+            var jsonFile = "customers.json";
             var jsonPath = $"{currentDirectory}\\Datasets\\{jsonFile}";
 
             string json = File.ReadAllText(jsonPath);
@@ -28,8 +28,8 @@ namespace CarDealer
 
             //Console.WriteLine(ImportSuppliers(context, json));
             //Console.WriteLine(ImportParts(context, json));
-            Console.WriteLine(ImportCars(context, json));
-            //Console.WriteLine(ImportCustomers(context, json));
+            //Console.WriteLine(ImportCars(context, json));
+            Console.WriteLine(ImportCustomers(context, json));
         }
 
         //Problem 08 - Import Suppliers
@@ -95,10 +95,16 @@ namespace CarDealer
             return $"Successfully imported {context.Cars.Count()}.";
         }
 
-        ////Problem 11 - Import Customers
-        //public static string ImportCustomers(CarDealerContext context, string inputJson)
-        //{
-        //    return $"Successfully added "
-        //}
+        //Problem 11 - Import Customers
+        public static string ImportCustomers(CarDealerContext context, string inputJson)
+        {
+            IEnumerable<Customer> customers = JsonConvert.DeserializeObject<IEnumerable<Customer>>(inputJson);
+
+            context.Customers.AddRange(customers);
+
+            context.SaveChanges();
+
+            return $"Successfully added {context.Customers.Count()}.";
+        }
     }
 }
