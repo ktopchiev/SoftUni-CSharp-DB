@@ -14,33 +14,25 @@ namespace CarDealer
     {
         public static void Main(string[] args)
         {
-            var workingDirectory = Environment.CurrentDirectory;
-            var currentDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            //var jsonFile1 = "suppliers.json";
-            //var jsonFile2 = "parts.json";
-            //var jsonFile3 = "cars.json";
-            //var jsonFile4 = "customers.json";
-            //var jsonFile5 = "sales.json";
+            //var workingDirectory = Environment.CurrentDirectory;
+            //var currentDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            //var jsonFile = "suppliers.json";
+            //var jsonFile = "parts.json";
+            //var jsonFile = "cars.json";
+            //var jsonFile = "customers.json";
+            //var jsonFile = "sales.json";
 
-            //var jsonPath1 = $"{currentDirectory}\\Datasets\\{jsonFile1}";
-            //var jsonPath2 = $"{currentDirectory}\\Datasets\\{jsonFile2}";
-            //var jsonPath3 = $"{currentDirectory}\\Datasets\\{jsonFile3}";
-            //var jsonPath4 = $"{currentDirectory}\\Datasets\\{jsonFile4}";
-            //var jsonPath5 = $"{currentDirectory}\\Datasets\\{jsonFile5}";
+            //var jsonPath = $"{currentDirectory}\\Datasets\\{jsonFile}";
 
-            //string json1 = File.ReadAllText(jsonPath1);
-            //string json2 = File.ReadAllText(jsonPath2);
-            //string json3 = File.ReadAllText(jsonPath3);
-            //string json4 = File.ReadAllText(jsonPath4);
-            //string json5 = File.ReadAllText(jsonPath5);
+            //string json = File.ReadAllText(jsonPath);
 
             var context = new CarDealerContext();
 
-            //Console.WriteLine(ImportSuppliers(context, json1));
-            //Console.WriteLine(ImportParts(context, json2));
-            //Console.WriteLine(ImportCars(context, json3));
-            //Console.WriteLine(ImportCustomers(context, json4));
-            //Console.WriteLine(ImportSales(context, json5));
+            //Console.WriteLine(ImportSuppliers(context, json));
+            //Console.WriteLine(ImportParts(context, json));
+            //Console.WriteLine(ImportCars(context, json));
+            //Console.WriteLine(ImportCustomers(context, json));
+            //Console.WriteLine(ImportSales(context, json));
         }
 
         //Problem 08 - Import Suppliers
